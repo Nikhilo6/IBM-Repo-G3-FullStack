@@ -1,0 +1,17 @@
+<form ngForm style="text-align:center;">
+    <h2>Assign Courses to Professors</h2>
+  
+    <div class="form-group">
+      <label for="ID">Professor ID</label>
+      <input type="number"  class="form-control" id="ID"
+             [(ngModel)]="user.prof_id" name="id">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="ID">Course ID</label>
+      <input type="number"  class="form-control" id="ID"
+             [(ngModel)]="user.course_id" name="id">
+    </div>
+    <br>
+      <button type="submit" class="btn btn-primary" (click)=" assign_course()">Submit</button>
+    </form>

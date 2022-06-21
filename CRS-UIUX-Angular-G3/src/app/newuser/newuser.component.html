@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <!-- Body of Form starts -->
+  	<div class="container">
+      <form  autocomplete="on" ngForm>
+        <!--First name-->
+    		<div class="box">
+          <label for="firstName" class="fl fontLabel"> User Name: </label>
+    			<div class="new iconBox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+    			<div class="fr">
+    					<input type="text" name="userName" placeholder="User Name"
+              class="textBox" autofocus="on"  required
+              [(ngModel)] = "newuser.user_name">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--First name-->
+
+    		<div class="box">
+          <label for="role" class="fl fontLabel"> Role: </label>
+    			<div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="text" required name="role" maxlength="10" placeholder="student/professor/admin" class="textBox"  required
+                        [(ngModel)]="newuser.role">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+
+
+    		<!---Email ID---->
+    		<div class="box">
+          <label for="email" class="fl fontLabel"> Email ID: </label>
+    			<div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="email" required name="email" placeholder="Email Id" class="textBox"required
+                        [(ngModel)] = "newuser.user_id">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!--Email ID----->
+
+
+    		<!---Password------>
+    		<div class="box">
+          <label for="password" class="fl fontLabel"> Password </label>
+    			<div class="fl iconBox"><i class="fa fa-key" aria-hidden="true"></i></div>
+    			<div class="fr">
+    					<input type="Password" required name="password" placeholder="Password" class="textBox"required
+                        [(ngModel)] = "newuser.user_password">
+    			</div>
+    			<div class="clr"></div>
+    		</div>
+    		<!---Password---->
+
+    		<!---Gender----->
+    		<div class="box radio">
+          <label for="gender" class="fl fontLabel"> Gender: </label>
+    				<input type="radio" name="Gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+    				<input type="radio" name="Gender" value="Female" required> Female
+    		</div>
+    		<!---Gender--->
+
+
+    		<!--Terms and Conditions------>
+    		<div class="box terms">
+    				<input type="checkbox" name="Terms" required> &nbsp; I accept the terms and conditions
+    		</div>
+    		<!--Terms and Conditions------>
+
+            <div class="box" style="background: #2d3e3f">
+                <button type="button" name="Submit"class="btn btn-success" (click)=" new_user()">---Submit</button>
+            </div>
+        <!---Submit Button----->
+
+
+      </form>
+          		<!---Submit Button------>
+
+  </div>
+  <!--Body of Form ends--->
+  </body>
+</html>

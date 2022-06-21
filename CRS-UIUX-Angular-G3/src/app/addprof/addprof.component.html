@@ -1,0 +1,18 @@
+<form ngForm style="text-align:center;">
+    <h2>Add Professor</h2>
+  
+    <div class="form-group">
+      <label for="ID">Professor ID</label>
+      <input type="number"  class="form-control" id="ID"
+             [(ngModel)]="user.prof_id" name="age">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="course_name">Professor Name</label>
+        <input type="text" class="form-control" id="name"
+               required
+               [(ngModel)]="user.prof_name" name="name">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary" (click)=" add_professor()">Submit</button>
+    </form>

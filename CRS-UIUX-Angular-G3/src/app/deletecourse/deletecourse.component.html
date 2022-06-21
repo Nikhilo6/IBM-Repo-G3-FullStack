@@ -1,0 +1,11 @@
+<form ngForm style="text-align:center;">
+  <h2>Delete Course</h2>
+
+  <div class="form-group">
+    <label for="ID">Course ID</label>
+    <input type="number"  class="form-control" id="ID"
+           [(ngModel)]="newuser.course_id" name="age">
+  </div>
+  <br>
+    <button type="submit" class="btn btn-primary" (click)=" delete_course()">Submit</button>
+  </form>

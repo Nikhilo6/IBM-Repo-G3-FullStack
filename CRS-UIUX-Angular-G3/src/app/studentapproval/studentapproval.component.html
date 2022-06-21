@@ -1,0 +1,11 @@
+<form ngForm style="text-align:center;">
+    <h2>Student Approval</h2>
+  
+    <div class="form-group">
+      <label for="ID">Student ID</label>
+      <input type="number"  class="form-control" id="ID"
+             [(ngModel)]="user.stud_id" name="age">
+    </div>
+    <br>
+      <button type="submit" class="btn btn-primary" (click)=" student_approval()">Submit</button>
+    </form>

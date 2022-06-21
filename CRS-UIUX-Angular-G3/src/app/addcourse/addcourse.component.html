@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="addcourse.component.css"/>
+</head>
+<body >
+  <form ngForm style="text-align:center;" >
+    <h2>Add Course</h2>
+    <div class="form-group">
+      <label for="course_name">Course Name </label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="newuser.course_name" name="name">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="ID">Course ID</label>
+      <input type="number"  class="form-control" id="ID"
+             [(ngModel)]="newuser.course_id" name="age">
+    </div>
+    <br>
+      <button type="submit" class="btn btn-primary" (click)=" add_course()">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="user.component.css"/>
+        <title>Login</title>
+    </head>
+    <body>
+        <h1 id="crs">Welcome to CRS Application</h1>
+        <h2>Login Page</h2><br>    
+        <div class="login">    
+        <form id="login" ngForm>    
+            <label for = username><b>User Name     
+            </b>    
+            </label>    
+            <input type="text" name="Uname" id="Uname"  required
+            [(ngModel)]="user.username"  placeholder="Username">    
+            <br><br>    
+            <label for = password><b>Password     
+            </b>    
+            </label>    
+            <input type="Password" name="Pass" id="Pass" required
+            [(ngModel)]="user.password"  placeholder="Password">    
+            <br><br>    
+
+            <button type="login" class="btn btn-primary" (click)=" login()">Log in</button>
+
+            <br><br>    
+            <input type="checkbox" id="check">    
+            <span>Remember me</span>    
+
+        </form>
+        <br><br>    
+        <a id="ps" [routerLink]="['/pw']">Forgot Password? Change here</a>    
+            <a [routerLink]="['/new_reg']">
+            <button> New Registration</button>
+            </a>
+    </div> 
+    </body>
+    </html>
